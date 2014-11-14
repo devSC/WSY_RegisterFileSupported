@@ -7,6 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+//http://www.cocoanetics.com/2013/01/open-in-all-files/
+//http://stevenpsmith.wordpress.com/2013/03/11/using-custom-file-types-to-import-data-into-your-ios-apps/
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
