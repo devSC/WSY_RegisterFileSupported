@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-
+#import <MediaPlayer/MediaPlayer.h>
 @interface AppDelegate ()
 
 @end
@@ -45,9 +45,11 @@
 }
 - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
     if (url){
-        NSString *str = [NSString stringWithContentsOfURL:url encoding:NSUTF8StringEncoding error:nil];
-        NSLog(@"The file contained: %@",str);
+//        NSString *str = [NSString stringWithContentsOfURL:url encoding:NSUTF8StringEncoding error:nil];
+        NSLog(@"The file contained: %@",url);
 
+        MPMoviePlayerViewController *viewController = [[MPMoviePlayerViewController alloc] initWithContentURL:url];
+        [self.window addSubview:viewController.view];
     }
     return YES;
 }
